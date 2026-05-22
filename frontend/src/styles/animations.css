@@ -1,0 +1,146 @@
+/* =========================
+   PREMIUM ANIMATIONS
+========================= */
+
+@keyframes slowSpin {
+
+  0% {
+
+    transform:
+      rotate(0deg);
+  }
+
+  100% {
+
+    transform:
+      rotate(360deg);
+  }
+}
+
+@keyframes rise {
+
+  0% {
+    transform:
+      translateY(24px);
+
+    opacity: 0;
+  }
+
+  100% {
+    transform:
+      translateY(0);
+
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+
+  100% {
+    transform:
+      rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+
+  0% {
+    background-position:
+      200% 0;
+  }
+
+  100% {
+    background-position:
+      -200% 0;
+  }
+}
+
+@keyframes fadeUp {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translate3d(0,16px,0);
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translate3d(0,0,0);
+  }
+}
+
+@keyframes pulseGlow {
+
+  0% {
+
+    box-shadow:
+      0 0 0 rgba(99,102,241,0);
+  }
+
+  50% {
+
+    box-shadow:
+      0 0 18px rgba(99,102,241,0.10);
+  }
+
+  100% {
+
+    box-shadow:
+      0 0 0 rgba(99,102,241,0);
+  }
+}
+@keyframes floatSoft {
+
+  0% {
+
+    transform:
+      translateY(0px);
+  }
+
+  50% {
+
+    transform:
+      translateY(-6px);
+  }
+
+  100% {
+
+    transform:
+      translateY(0px);
+  }
+}
+
+.feature-card {
+
+  animation:
+    fadeUp .7s ease both;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.feature-card:nth-child(1) {
+
+  animation-delay: .1s;
+}
+
+.feature-card:nth-child(2) {
+
+  animation-delay: .2s;
+}
+
+.feature-card:nth-child(3) {
+
+  animation-delay: .3s;
+}
+
+.feature-card:nth-child(4) {
+
+  animation-delay: .4s;
+}

@@ -1,0 +1,65 @@
+@media (max-width: 1100px) {
+  .hero-section, .workspace-grid, .dashboard-grid { grid-template-columns: 1fr; }
+  .hero-section { min-height: auto; }
+  .hero-product { min-height: 360px; }
+  .feature-grid, .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 860px) {
+  .mobile-only, .sidebar-toggle, .close-sidebar { display: inline-flex; }
+  .site-nav { width: calc(100% - 20px); }
+  .nav-links {
+    position: fixed;
+    left: 10px;
+    right: 10px;
+    top: 78px;
+    display: none;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: rgba(8, 10, 20, 0.96);
+  }
+  .nav-links.open { display: flex; }
+  .nav-actions .ghost-button { display: none; }
+  .hero-section { grid-template-columns: 1fr; padding-top: 3rem; }
+  .testimonial-grid, .pricing-grid, .quick-actions, .history-grid, .profile-grid { grid-template-columns: 1fr; }
+  .app-shell { grid-template-columns: 1fr; }
+  .sidebar-toggle {
+    position: fixed;
+    top: 0.8rem;
+    left: 0.8rem;
+    z-index: 60;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    color: white;
+    background: rgba(8, 10, 20, 0.9);
+  }
+  .sidebar {
+    position: fixed;
+    z-index: 70;
+    inset: 0 auto 0 0;
+    width: min(310px, 88vw);
+    transform: translateX(-105%);
+    transition: transform 0.24s ease;
+  }
+  .sidebar.open { transform: translateX(0); }
+  .close-sidebar { position: absolute; top: 0.8rem; right: 0.8rem; width: 38px; height: 38px; }
+  .page-pad { padding: 4.5rem 1rem 1rem; }
+  .page-hero { align-items: start; flex-direction: column; }
+  .review-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .hero-copy h1, .pricing-hero h1 { font-size: clamp(2.35rem, 15vw, 4rem); }
+  .hero-actions, .nav-actions, .workspace-actions { width: 100%; }
+  .hero-actions a, .workspace-actions button { width: 100%; }
+  .feature-grid, .stats-grid, .insight-grid { grid-template-columns: 1fr !important; }
+  .section-heading { align-items: start; flex-direction: column; }
+  .footer { flex-direction: column; }
+  .monaco-shell { height: 58vh; min-height: 360px; }
+  .editor-toolbar, .panel-toolbar { align-items: start; flex-direction: column; }
+  .tool-actions { flex-wrap: wrap; }
+  .toast-stack { left: 1rem; right: 1rem; }
+  .toast { max-width: none; }
+}

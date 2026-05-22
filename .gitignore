@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+.env.local
+.env.example
+npm-debug.log*
+coverage/
+.DS_Store
